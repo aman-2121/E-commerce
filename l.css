@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+   
+}
+body{
+    background: linear-gradient(rgb(66, 211, 97), rgb(155, 208, 21));
+    height: 100vh;
+    margin: 80px;
+}
+h1{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 30px;
+}
+.eyob{
+    background-color: rgb(30, 123, 123);
+    max-width: 350px;
+    height: 550px;
+    margin-top: auto;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    
+    
+}
+.aman{
+    position: relative;
+    text-align: center;
+}
+.aman i{
+    position: absolute;
+    right: 45px;
+    top: 25px;
+}
+
+.aman input{
+    text-align: center;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    
+}
+#register{
+
+    margin: 40px;
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    color: aliceblue;  
+}
+#register:hover{
+    background-color: rgb(19, 144, 197);
+}
+

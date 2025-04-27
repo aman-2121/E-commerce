@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: radial-gradient(rgb(118, 128, 123),rgb(137, 242, 233));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.form{
+    background-color: rgba(166, 125, 164, 0.899);
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0px, 0px, 4px ,8px,  green;
+    justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1{
+    text-align: center;
+    color: white;
+    margin: 30px;
+    text-transform: capitalize;
+    
+}
+input[type="text"],[type="password"],[type="email"],[type="number"]{
+
+    font-size: 18px;
+    font-weight: bold;
+   margin: auto;
+     width: 80%;
+    height: 3.5vh;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+input[type="submit"]{
+    text-align: center;
+    border-radius: 5px;
+    width: 70px;
+    font-size: 18px;
+    height: 3.5vh;
+    color: white;
+    margin-top: 30px;
+    background-color: rgb(19, 41, 187);
+}
+input[type="submit"]:hover{
+    background-color: rgb(51, 135, 225);
+    text-transform: capitalize;
+
+}
+button{
+    margin-top: 30px;
+    text-align: center;
+    background-color:transparent;
+    color: aliceblue;
+    border-radius:5px ;
+    border: none;
+}
+button p{
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-transform: capitalize;
+
+}
+.aman{
+    
+    background-color: transparent;
+
+}
+.aman:hover{
+    text-decoration: underline;
+    color: rgb(10, 248, 10);
+}
+input::placeholder{
+    color: black;
+    padding: 10px;
+    text-transform: capitalize;
+ position: relative;
+
+}
+input:focus::placeholder{
+    color: rgb(12, 237, 12);
+     transform: translateY(-20px);
+     transition: 0.8s;
+}

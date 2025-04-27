@@ -1,0 +1,326 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Admin Sidebar Styles */
+.admin {
+  width: 250px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  min-height: 100vh;
+  padding: 20px 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+
+.admin h1 {
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.admin ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.admin ul li {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.admin ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin ul li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 12px 15px;
+  font-size: 1rem;
+}
+
+.admin ul li a:hover {
+  color: #3498db;
+  transform: translateX(5px);
+}
+
+/* Main Content Area */
+.logout {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 20px;
+}
+
+.login_header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login_header a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.login_header a:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Content Info Section */
+.info {
+
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  line-height: 1.8;
+  color: #555;
+  height: 200vh;
+  color: #555;
+  margin: auto;
+  text-align: center;
+}
+label {
+  display: inline-block;
+  width: 100px;
+  color: black;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 20px;
+}
+input[type='text'],
+input[type='file'],
+input[type='number'],
+textarea {
+  text-align: center;
+  margin: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px;
+  width: 200px;
+}
+input[type='submit'] {
+  background: #3498db;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 5px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  background: #67b9f0;
+}
+textarea {
+  height: 100px;
+}
+  
+  
+  
+  
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 7PX;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+img {
+  max-width: 100px;
+  height: auto;
+}
+.sidebar {
+  float: left;
+  width: 200px;
+  padding: 20px;
+  background: #f1f1f1;
+  height: 100vh;
+}
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+.admin ul li:nth-child(1) a::before { content: "📊 "; }
+.admin ul li:nth-child(2) a::before { content: "👥 "; }
+.admin ul li:nth-child(3) a::before { content: "➕ "; }
+.admin ul li:nth-child(4) a::before { content: "👀 "; }
+.delete{
+background: transparent;
+text-align: center;
+border-radius: 5px;
+color: rgb(224, 10, 10);
+text-transform: capitalize;
+text-decoration: none;
+}
+.delete:hover{
+background: red;
+color: rgb(232, 233, 236);
+}
+.update{
+background: transparent;
+text-align: center;
+border-radius: 5px;
+color: rgb(10, 110, 224);
+text-transform: capitalize;
+text-decoration: none;
+}
+.update:hover{
+background: rgb(33, 151, 230);
+color: white;
+}
+
+.card {
+background-color: #ffffff;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}
+
+.card .tot h3 {
+font-size: 28px;
+color: #00060f;
+margin-bottom: 15px;
+text-align:center;
+}
+
+.message-box {
+background-color: #dbbdbd;
+border-left: 4px solid hsl(202, 100%, 2%);
+padding: 15px;
+margin-bottom: 15px;
+border-radius: 10px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-box strong {
+font-size: 16px;
+color: #2d3748;
+}
+
+.message-box small {
+color: #7a7a7a;
+font-size: 14px;
+}
+
+.message-time {
+display: block;
+font-size: 12px;
+color: #aaa;
+margin-top: 5px;
+}
+
+.message-box p {
+margin-top: 10px;
+font-size: 15px;
+line-height: 1.5;
+color: #333;
+}
+/* admin.css - Average Media Query Solution */
+
+/* Base Styles (Mobile First) */
+/* ... your existing CSS rules ... */
+
+/* Average Media Queries */
+@media (min-width: 576px) {
+/* Small devices (landscape phones, 576px and up) */
+.card-container {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (min-width: 768px) {
+/* Medium devices (tablets, 768px and up) */
+.admin {
+width: 200px;
+}
+.main-content {
+margin-left: 200px;
+width: calc(100% - 200px);
+}
+.card-container {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (min-width: 992px) {
+/* Large devices (desktops, 992px and up) */
+.admin {
+width: 250px;
+}
+.main-content {
+margin-left: 250px;
+width: calc(100% - 250px);
+}
+.card-container {
+grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media (min-width: 1200px) {
+/* Extra large devices (large desktops, 1200px and up) */
+/* Optional adjustments for very large screens */
+.main-content {
+max-width: 1400px;
+margin-left: 250px;
+}
+}
+
+/* Special case for mobile menu */
+@media (max-width: 767px) {
+/* Mobile menu styles when screen is less than 768px */
+.admin {
+width: 100%;
+height: auto;
+position: relative;
+}
+.admin ul {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.admin ul li {
+margin: 5px;
+}
+.main-content {
+margin-left: 0;
+width: 100%;
+}
+}
