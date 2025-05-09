@@ -71,14 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +251 961965837</p>
         <p><i class="fas fa-envelope"></i> <strong>Email:</strong> contact@ecomstore.com</p>
         <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Addis Ababa, Ethiopia</p>
-        
-        <div class="social-links">
-            <p><strong>Follow us:</strong></p>
-            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+   
     </div>
 
     <form method="POST" action="contact.php" class="contact-form">
@@ -132,13 +125,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <div class="footer-contact">
             <h3 class="footer-heading">Contact Us</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-map-marker-alt"></i> debre birhan, Ethiopia</p>
             <p><i class="fas fa-phone"></i> +251 961965837</p>
-            <p><i class="fas fa-envelope"></i> contact@ecomstore.com</p>
+            <p><i class="fas fa-envelope"></i> amanmarkos582@gmail.com</p>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a <a href="https://github.com/aman-2121"  class="social-link"  target="_blank">
+        <i class="fab fa-github"></i> 
+      </a>
+               
+                <a href="https://facebook.com/Aman" class="social-link" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://t.me/Aman_vx" target="_blank" class="social-link" title="Message me on Telegram">
+        <i class="fab fa-telegram"></i> 
+      </a>
+    <a href="mailto:amanmarkos582@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>
