@@ -21,71 +21,76 @@ $is_user="user";
 $sql="SELECT * from register_table where usertype= '$is_user'";
 $result =mysqli_query($conn,$sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-   <link rel="stylesheet" href="admin.css">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="adminstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="admin">
-        <div class="add">
-            <h1>Ecommerce Admin</h1>
-            <ul>
-                <li>
-                    <a href="admin.php">dashboard</a>
-                </li>
-                <li>
-                    <a href="users.php">users</a>
-                </li>
-                <li>
-                    <a href="add_product.php">Add Products</a>
-                </li>
-                <li>
-                    <a href="display_product.php">views products</a>
-                </li>
-                <li>
-                    <a href="all_orders.php">orders</a>
-                </li>
-                <li>
-                    <a href="admin_messages.php">messages</a>
-                </li>
-            </ul>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    
+    <nav>
+        <div class="admin">
+            <div class="add">
+                <h1>Ecommerce Admin</h1>
+                <ul>
+                    <li>
+                        <a href="admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="users.php"><i class="fas fa-users"></i> Users</a>
+                    </li>
+                    <li>
+                        <a href="add_product.php"><i class="fas fa-plus-circle"></i> Add Products</a>
+                    </li>
+                    <li>
+                        <a href="display_product.php"><i class="fas fa-eye"></i> View Products</a>
+                    </li>
+                    <li>
+                        <a href="all_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
+                    </li>
+                    <li>
+                        <a href="admin_messages.php"><i class="fas fa-envelope"></i> Messages</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
+    
     <div class="logout">
         <div class="login_header">
-            <a href="logout.php">logout</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
         <div class="info">
-           <h1>All Users</h1>
-           <table>
-            <tr>
-                <th>User Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Address</th>
-            </tr>
-            <?php
-            while($row=mysqli_fetch_assoc($result)){
-                ?>
-
-            <tr>
-                <td><?php echo $row['name'] ?></td>
-                <td><?php echo $row['email'] ?></td>
-                <td><?php echo $row['phone'] ?></td>
-                <td><?php echo $row['address'] ?></td>
-            </tr>
-
-
+            <h1>All Users</h1>
+            <table>
+                <tr>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
                 <?php
-            }
-            ?>
-           
-           </table>
+                while($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($row['name']) ?></td>
+                    <td><?php echo htmlspecialchars($row['email']) ?></td>
+                    <td><?php echo htmlspecialchars($row['phone']) ?></td>
+                    <td><?php echo htmlspecialchars($row['address']) ?></td>
+                </tr>
+                <?php
+                }
+                ?>
+            </table>
         </div>
     </div>
 </body>

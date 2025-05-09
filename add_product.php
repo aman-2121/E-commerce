@@ -108,42 +108,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_products'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-    <link rel="stylesheet" href="admin.css">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="adminstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="admin">
-        <div class="add">
-            <h1>Ecommerce Admin</h1>
-            <ul>
-                <li><a href="admin.php">dashboard</a></li>
-                <li><a href="users.php">users</a></li>
-                <li><a href="add_product.php">Add Products</a></li>
-                <li><a href="display_product.php">views products</a></li>
-                <li>
-                    <a href="all_orders.php">orders</a>
-                </li>
-                <li>
-                    <a href="admin_messages.php">messages</a>
-                </li>
-            </ul>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    
+    <nav>
+        <div class="admin">
+            <div class="add">
+                <h1>Ecommerce Admin</h1>
+                <ul>
+                    <li><a href="admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="users.php"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="add_product.php"><i class="fas fa-plus-circle"></i> Add Products</a></li>
+                    <li><a href="display_product.php"><i class="fas fa-eye"></i> View Products</a></li>
+                    <li><a href="all_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="admin_messages.php"><i class="fas fa-envelope"></i> Messages</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
+    
     <div class="logout">
         <div class="login_header">
-            <a href="logout.php">logout</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
         <div class="info">
             <h1>Add Products</h1>
             <?php if (!empty($message)): ?>
-                <p style="color: <?php echo strpos($message, 'successfully') !== false ? 'green' : 'red'; ?>">
+                <div class="message <?php echo strpos($message, 'successfully') !== false ? 'success' : 'error'; ?>">
                     <?php echo htmlspecialchars($message); ?>
-                </p>
+                </div>
             <?php endif; ?>
             <div>
                 <form action="add_product.php" method="POST" enctype="multipart/form-data">
                     <div class="products">
-                        <label for="title">id</label>
+                        <label for="id">Product ID</label>
                         <input type="text" name="id" id="id" required>
                     </div>
                     <div class="products">
@@ -175,6 +181,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_products'])) {
     </div>
 </body>
 </html>
-<?php
-$conn->close();
-?>

@@ -39,79 +39,87 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
  $d_result=mysqli_query($conn,$delivered_sql);
  $total_delivered =mysqli_num_rows($d_result);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-   <link rel="stylesheet" href="admin.css">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="admin">
-        <div class="add">
-            <h1>Ecommerce Admin</h1>
-            <ul>
-                <li>
-                    <a href="admin.php">dashboard</a>
-                </li>
-                <li>
-                    <a href="users.php">users</a>
-                </li>
-                <li>
-                    <a href="add_product.php">Add Products</a>
-                </li>
-                <li>
-                    <a href="display_product.php">views products</a>
-                </li>
-                <li>
-                    <a href="all_orders.php">orders</a>
-                </li>
-                <li>
-                    <a href="admin_messages.php">messages</a>
-                </li>
-            </ul>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    
+    <nav>
+        <div class="admin">
+            <div class="add">
+                <h1>Ecommerce Admin</h1>
+                <ul>
+                    <li>
+                        <a href="admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="users.php"><i class="fas fa-users"></i> Users</a>
+                    </li>
+                    <li>
+                        <a href="add_product.php"><i class="fas fa-plus-circle"></i> Add Products</a>
+                    </li>
+                    <li>
+                        <a href="display_product.php"><i class="fas fa-eye"></i> View Products</a>
+                    </li>
+                    <li>
+                        <a href="all_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
+                    </li>
+                    <li>
+                        <a href="admin_messages.php"><i class="fas fa-envelope"></i> Messages</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
+    
     <div class="logout">
         <div class="login_header">
-            <a href="logout.php">logout</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
         <div class="info">
-           
-    
+            <h1>Dashboard Overview</h1>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="tot">
+                        <h3>Total Users</h3>
+                        <p><?php echo $total_user ?></p>
+                    </div>
+                </div>
 
-<div class="card-container">
-    <div class="card">
-        <div class="tot">
-            <h3>Total Users</h3>
-            <p><?php echo $total_user ?></p>
+                <div class="card">
+                    <div class="tot">
+                        <h3>Total Products</h3>
+                        <p><?php echo $total_product ?></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="tot">
+                        <h3>Total Orders</h3>
+                        <p><?php echo $total_order ?></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="tot">
+                        <h3>Total Delivered</h3>
+                        <p><?php echo $total_delivered ?></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="card">
-        <div class="tot">
-            <h3>Total products</h3>
-            <p><?php echo $total_product ?></p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="tot">
-            <h3>Total orders</h3>
-            <p><?php echo $total_order ?></p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="tot">
-            <h3>Total delivered</h3>
-            <p><?php echo $total_delivered ?></p>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>
