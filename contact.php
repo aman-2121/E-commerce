@@ -28,7 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - E-Commerce Store</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="stylee.css">
+=======
+    <link rel="stylesheet" href="userstyle.css">
+>>>>>>> bf13797b471c14cee378ea1d85df7e3056b86776
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>

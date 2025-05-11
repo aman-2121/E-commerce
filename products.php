@@ -28,7 +28,7 @@ if(isset($_GET['search'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - E-Commerce Store</title>
-    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="userstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
