@@ -1,4 +1,4 @@
-Base Styles
+/* Base Styles */
 :root {
   --primary-color: #4a6bff;
   --secondary-color: #6c757d;
@@ -559,3 +559,117 @@ nav ul li a::after {
 .product-card:nth-child(4) { animation-delay: 0.4s; }
 .product-card:nth-child(5) { animation-delay: 0.5s; }
 .product-card:nth-child(6) { animation-delay: 0.6s; }
+/* Order Processing Specific Styles */
+/* Orders Page Specific Styles */
+.orders-container {
+  max-width: 1200px;
+  margin: 100px auto 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.orders-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--dark-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.orders-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.orders-table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.orders-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.orders-table tr:hover {
+  background-color: var(--light-color);
+}
+
+.order-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.order-price {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.order-status {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-processing {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 2rem;
+  color: var(--secondary-color);
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .orders-table {
+      display: block;
+      overflow-x: auto;
+  }
+  
+  .orders-table th, 
+  .orders-table td {
+      padding: 0.75rem;
+  }
+  
+  .order-image {
+      width: 60px;
+      height: 60px;
+  }
+}
