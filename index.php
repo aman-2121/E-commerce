@@ -76,7 +76,7 @@ if(isset($_GET['search'])) {
             <img class="product-image" src="<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
             <h3 class="product-title"><?php echo htmlspecialchars($row['title']); ?></h3>
             <p class="product-description"><?php echo htmlspecialchars($row['discription']); ?></p>
-            <p class="product-price">$<?php echo number_format($row['price'], 2); ?></p>
+            <p class="product-price">ETB<?php echo number_format($row['price'], 2); ?></p>
             <?php if(isset($_SESSION['email']) && !empty($_SESSION['email'])): ?>
                 <a href="my_orders.php?id=<?php echo $row['id']?>&email=<?php echo $_SESSION['email'] ?>" class="buy-button">Buy Now</a>
             <?php else: ?>

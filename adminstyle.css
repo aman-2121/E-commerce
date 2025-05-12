@@ -518,6 +518,7 @@
     font-weight: 500;
     position: relative;
     padding-left: 50px;
+    color: rgb(22, 207, 22);
   }
   
   .message:before {
