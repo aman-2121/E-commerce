@@ -434,12 +434,29 @@ nav ul li a.active {
     </div>
 
     <script>
-        document.querySelectorAll('.btn-view').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const productTitle = this.closest('tr').querySelector('td:first-child').textContent;
-                alert(`Viewing details for: ${productTitle}`);
+     document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-view').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // More robust way to get the product title
+            const row = this.closest('tr');
+            const productTitle = row.querySelector('td:nth-child(1)').textContent.trim();
+            
+            // Get other product details from the row
+            const price = row.querySelector('.order-price').textContent.trim();
+            const status = row.querySelector('.order-status').textContent.trim();
+            
+            // Show details in alert (or better, in a modal)
+            alert(`Product Details:\n\nTitle: ${productTitle}\nPrice: ${price}\nStatus: ${status}`);
+            
+            // Alternative: console.log for debugging
+            console.log('Viewing product:', {
+                title: productTitle,
+                price: price,
+                status: status
             });
         });
+    });
+});
 
         document.querySelectorAll('.btn-cancel').forEach(btn => {
             btn.addEventListener('click', function() {
