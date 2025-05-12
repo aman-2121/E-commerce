@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /* Base Styles */
-=======
-Base Styles
->>>>>>> bf13797b471c14cee378ea1d85df7e3056b86776
 :root {
   --primary-color: #4a6bff;
   --secondary-color: #6c757d;
@@ -562,7 +558,6 @@ nav ul li a::after {
 .product-card:nth-child(3) { animation-delay: 0.3s; }
 .product-card:nth-child(4) { animation-delay: 0.4s; }
 .product-card:nth-child(5) { animation-delay: 0.5s; }
-<<<<<<< HEAD
 .product-card:nth-child(6) { animation-delay: 0.6s; }
 /* Order Processing Specific Styles */
 /* Orders Page Specific Styles */
@@ -678,6 +673,3 @@ nav ul li a::after {
       height: 60px;
   }
 }
-=======
-.product-card:nth-child(6) { animation-delay: 0.6s; }
->>>>>>> bf13797b471c14cee378ea1d85df7e3056b86776
