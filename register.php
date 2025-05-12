@@ -97,7 +97,25 @@ $conn->close();
 </head>
 <body>
 
-   <div class="form" id="register">
+   <div class="form" id="login">
+    <h1>Login</h1>
+    <form action="" method="POST">
+        <div class="input">
+            <input type="email" name="email" id="" placeholder="Email" required>
+        </div>
+        <div class="input">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="input">
+            <input type="submit" name="login" value="Login">
+        </div>
+        <div class="toggle-btn">
+            <button type="button" onclick="toggleform('register')">you don't have an account? <span class="aman">Register</span></button>
+        </div>
+    </form>
+   </div>
+
+   <div class="form" id="register" style="display: none;">
     <h1>Register Form</h1>
    <form action="" method="POST">
         <div class="input">
@@ -125,24 +143,6 @@ $conn->close();
             <button type="button" onclick="toggleform('login')">already have an account? <span class="aman">Login</span></button>
         </div>
    </form>
-   </div>
-
-   <div class="form" id="login" style="display: none;">
-    <h1>Login</h1>
-    <form action="" method="POST">
-        <div class="input">
-            <input type="email" name="email" id="" placeholder="Email" required>
-        </div>
-        <div class="input">
-            <input type="password" name="password" placeholder="Password" required>
-        </div>
-        <div class="input">
-            <input type="submit" name="login" value="Login">
-        </div>
-        <div class="toggle-btn">
-            <button type="button" onclick="toggleform('register')">you do't have an account? <span class="aman">Register</span></button>
-        </div>
-    </form>
    </div>
 
 <script>
