@@ -100,7 +100,7 @@ if(isset($_GET['search'])) {
                 <a href="index.php">Home</a>
                 <a href="products.php">Products</a>
                 <a href="contact.php">Contact</a>
-                <a href="register.php">Register</a>
+                <a href="register.php">Login</a>
             </div>
         </div>
         
