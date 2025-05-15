@@ -46,7 +46,7 @@ if(isset($_GET['search'])) {
             <li><a class="rigi" href="my_orders.php?email=<?php echo $_SESSION['email'] ?>">Orders</a></li>
             <li><a class="rigi" href="logout.php">Logout</a></li>
         <?php else: ?>
-            <li><a class="rigi" href="register.php">Register</a></li>
+            <li><a class="rigi" href="register.php">Login</a></li>
         <?php endif; ?>
     </ul>
  </nav>
