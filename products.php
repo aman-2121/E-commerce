@@ -110,7 +110,7 @@ if(isset($_GET['search'])) {
             <h3 class="footer-heading">Contact Us</h3>
             <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
             <p><i class="fas fa-phone"></i> +251 961965837</p>
-            <p><i class="fas fa-envelope"></i> contact@ecomstore.com</p>
+            <p><i class="fas fa-envelope"></i> amanmarkos@gmail.com</p>
             <div class="social-links">
             <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a <a href="https://github.com/aman-2121"  class="social-link"  target="_blank">
