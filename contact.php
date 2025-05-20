@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <div class="contact-info">
         <p><strong><i class="fas fa-info-circle"></i> Need help or have questions?</strong> Our team is here to assist you with any inquiries you may have.</p>
-        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +251 961965837</p>
+        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +251961965837</p>
         <p><i class="fas fa-envelope"></i> <strong>Email:</strong> amanmarkos582@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> debre birhan, Ethiopia</p>
    
@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="footer-contact">
             <h3 class="footer-heading">Contact Us</h3>
             <p><i class="fas fa-map-marker-alt"></i> debre birhan, Ethiopia</p>
-            <p><i class="fas fa-phone"></i> +251 961965837</p>
+            <p><i class="fas fa-phone"></i> +251961965837</p>
             <p><i class="fas fa-envelope"></i> amanmarkos582@gmail.com</p>
             <div class="social-links">
             <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
