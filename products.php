@@ -112,7 +112,7 @@ if(isset($_GET['search'])) {
             <p><i class="fas fa-phone"></i> +251 961965837</p>
             <p><i class="fas fa-envelope"></i> amanmarkos@gmail.com</p>
             <div class="social-links">
-            <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="www.linkedin.com/in/amanuel-neby-b38275367" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a <a href="https://github.com/aman-2121"  class="social-link"  target="_blank">
         <i class="fab fa-github"></i> 
       </a>
