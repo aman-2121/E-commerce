@@ -34,6 +34,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - E-Commerce Store</title>
     <link rel="stylesheet" href="userstyle.css">
+    <style>
+        .login-prompt {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #856404;
+}
+
+.login-prompt a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+    background-color: #e2f0fd;
+    border-radius: 3px;
+}
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -100,9 +125,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </button>
         </form>
     <?php else: ?>
-        <div class="login-prompt">
-            <p>You need to <a href="register.php">register</a> or <a href="login.php">login</a> to send us a message.</p>
-        </div>
+       <div class="login-prompt">
+    <p>You need to <a href="register.php">login</a> to send us a message.</p>
+</div>
     <?php endif; ?>
 </div>
 
