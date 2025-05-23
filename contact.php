@@ -9,15 +9,20 @@ $database = 'ecomerce_php';
 $conn = mysqli_connect($host, $username, $password, $database);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $message = mysqli_real_escape_string($conn, $_POST['message']);
-
-    $sql = "INSERT INTO messages (name, email, message) VALUES ('$name', '$email', '$message')";
-    if (mysqli_query($conn, $sql)) {
-        $success = "Message sent successfully!";
+    // Check if user is logged in
+    if(!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+        $error = "You must be logged in to send a message.";
     } else {
-        $error = "Error sending message: " . mysqli_error($conn);
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $message = mysqli_real_escape_string($conn, $_POST['message']);
+
+        $sql = "INSERT INTO messages (name, email, message) VALUES ('$name', '$email', '$message')";
+        if (mysqli_query($conn, $sql)) {
+            $success = "Message sent successfully!";
+        } else {
+            $error = "Error sending message: " . mysqli_error($conn);
+        }
     }
 }
 ?>
@@ -28,11 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - E-Commerce Store</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="stylee.css">
-=======
     <link rel="stylesheet" href="userstyle.css">
->>>>>>> bf13797b471c14cee378ea1d85df7e3056b86776
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -75,29 +76,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +251961965837</p>
         <p><i class="fas fa-envelope"></i> <strong>Email:</strong> amanmarkos582@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> debre birhan, Ethiopia</p>
-   
     </div>
 
-    <form method="POST" action="contact.php" class="contact-form">
-        <div class="form-group">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" id="name" name="name" class="form-input" required>
+    <?php if(isset($_SESSION['email']) && !empty($_SESSION['email'])): ?>
+        <form method="POST" action="contact.php" class="contact-form">
+            <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" required value="<?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ''; ?>">
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" name="email" class="form-input" required value="<?php echo $_SESSION['email']; ?>">
+            </div>
+            
+            <div class="form-group">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+    <?php else: ?>
+        <div class="login-prompt">
+            <p>You need to <a href="register.php">register</a> or <a href="login.php">login</a> to send us a message.</p>
         </div>
-        
-        <div class="form-group">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" id="email" name="email" class="form-input" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea id="message" name="message" class="form-textarea" required></textarea>
-        </div>
-        
-        <button type="submit" class="submit-button">
-            <i class="fas fa-paper-plane"></i> Send Message
-        </button>
-    </form> 
+    <?php endif; ?>
 </div>
 
 <footer class="footer">
@@ -133,16 +139,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><i class="fas fa-phone"></i> +251961965837</p>
             <p><i class="fas fa-envelope"></i> amanmarkos582@gmail.com</p>
             <div class="social-links">
-            <a href="www.linkedin.com/in/amanuel-neby-b38275367" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a <a href="https://github.com/aman-2121"  class="social-link"  target="_blank">
-        <i class="fab fa-github"></i> 
-      </a>
-               
+                <a href="www.linkedin.com/in/amanuel-neby-b38275367" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/aman-2121" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://facebook.com/Aman" class="social-link" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://t.me/Aman_vx" target="_blank" class="social-link" title="Message me on Telegram">
-        <i class="fab fa-telegram"></i> 
-      </a>
-    <a href="mailto:amanmarkos582@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://t.me/Aman_vx" target="_blank" class="social-link" title="Message me on Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="mailto:amanmarkos582@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>
