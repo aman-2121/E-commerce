@@ -423,7 +423,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label class="logo">Ecom</label>
     <ul class="w">
         <li>
-            <a href="homme.php">home</a>
+            <a href="index.php">home</a>
         <li> 
          <li>  
             <a href="product.php">products</a>
