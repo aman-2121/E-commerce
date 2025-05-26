@@ -345,10 +345,10 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email']))
             
             <div>
                 <h4>quick link</h4>
-                <p><a href="homme.php">home</a></p>
+                <p><a href="index.php">home</a></p>
                 <p><a href="product.php">products</a></p>
                 <p><a href="contact.php">contact</a></p>
-                <p><a href="registere.php">register</a></p>
+                <p><a href="register.php">register</a></p>
               
             </div>
 
