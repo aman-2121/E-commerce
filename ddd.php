@@ -64,7 +64,7 @@ $result = mysqli_query($conn,$sql);
     <label class="logo">Ecom</label>
     <ul class="w">
         <li>
-            <a href="homme.php">home</a>
+            <a href="homme.php">index</a>
         <li> 
          <li>  
             <a href="product.php">products</a>
