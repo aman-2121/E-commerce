@@ -363,11 +363,12 @@ if ($my_email || $user_email) {
                                 <span>No Image</span>
                             <?php endif; ?>
                         </td>
-                        <td>
-                            <span class="status <?php echo strtolower(htmlspecialchars($row['status'] ?? 'pending')); ?>">
-                                <?php echo htmlspecialchars($row['status'] ?? 'Pending'); ?>
-                            </span>
-                        </td>
+                      <td>
+          <span class="status <?php echo strtolower(htmlspecialchars($row['status'] ?? 'pending')); ?>">
+           In Progress <!-- This will always show "In Progress" -->
+           (<?php echo htmlspecialchars($row['status'] ?? 'Pending'); ?>) <!-- This shows the actual status in parentheses -->
+                </span>
+             </td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
