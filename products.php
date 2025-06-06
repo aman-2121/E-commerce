@@ -110,23 +110,22 @@ if (isset($_GET['search'])) {
 <h2 class="section-title">Our Products</h2>
 <div class="card-container">
     <div class="card-grid">
-        <?php while($row = mysqli_fetch_assoc($result)): ?>
-        <div class="product-card">
-            <img class="product-image" src="<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
-            <h3 class="product-title"><?php echo htmlspecialchars($row['title']); ?></h3>
-            <p class="product-description"><?php echo htmlspecialchars($row['discription']); ?></p>
-            <p class="product-price">ETB <?php echo number_format($row['price'], 2); ?></p>
-            <p class="product-stock">Available: <?php echo $row['quantity']; ?></p>
-            <?php if(isset($_SESSION['email']) && !empty($_SESSION['email'])): ?>
-                <?php if($row['quantity'] > 0): ?>
-                    <a href="products.php?buy=<?php echo $row['id'] ?>" class="buy-button">Buy Now</a>
+        <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <div class="product-card">
+                <img class="product-image" src="<?php echo htmlspecialchars($row['image']); ?>"
+                     alt="<?php echo htmlspecialchars($row['title']); ?>">
+                <h3 class="product-title"><?php echo htmlspecialchars($row['title']); ?></h3>
+                <p class="product-description"><?php echo htmlspecialchars($row['discription']); ?></p>
+                <p class="product-price">ETB <?php echo number_format($row['price'], 2); ?></p>
+                <p class="product-description">Available: <?php echo $row['quantity']; ?></p>
+                <?php if ($row['quantity'] <= 0): ?>
+                    <button class="buy-button disabled" disabled style="background-color: grey;">Out of Stock</button>
+                <?php elseif (isset($_SESSION['email'])): ?>
+                    <a href="index.php?buy=<?php echo $row['id']; ?>" class="buy-button">Buy Now</a>
                 <?php else: ?>
-                    <button class="buy-button" disabled>Out of Stock</button>
+                    <a href="register.php" class="buy-button">Login to Buy</a>
                 <?php endif; ?>
-            <?php else: ?>
-                <a href="register.php" class="buy-button">Login to Buy</a>
-            <?php endif; ?>
-        </div>
+            </div>
         <?php endwhile; ?>
     </div>
 </div>
@@ -157,7 +156,7 @@ if (isset($_GET['search'])) {
         </div>
         <div class="footer-contact">
             <h3 class="footer-heading">Contact Us</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-map-marker-alt"></i> Debre Birhan, Ethiopia</p>
             <p><i class="fas fa-phone"></i> +251 961965837</p>
             <p><i class="fas fa-envelope"></i> amanmarkos@gmail.com</p>
             <div class="social-links">

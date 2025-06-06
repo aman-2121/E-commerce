@@ -120,7 +120,7 @@ if (isset($_GET['search'])) {
                 <h3 class="product-title"><?php echo htmlspecialchars($row['title']); ?></h3>
                 <p class="product-description"><?php echo htmlspecialchars($row['discription']); ?></p>
                 <p class="product-price">ETB <?php echo number_format($row['price'], 2); ?></p>
-                <p class="product-quantity">Available: <?php echo $row['quantity']; ?></p>
+                <p class="product-description">Available: <?php echo $row['quantity']; ?></p>
                 <?php if ($row['quantity'] <= 0): ?>
                     <button class="buy-button disabled" disabled style="background-color: grey;">Out of Stock</button>
                 <?php elseif (isset($_SESSION['email'])): ?>
